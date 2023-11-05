@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite + TS</title>
+</head>
+
+<body style="margin: 0px; overflow: hidden;">
+  <div id="app"></div>
+  <div style="position: relative;">
+    <canvas style="display: block;" id="canvas"></canvas>
+    <canvas style="display: block;" id="canvas_text"></canvas>
+  </div>
+  <style>
+    #canvas_text {
+      background-color: transparent;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 10;
+    }
+  </style>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
