@@ -1,6 +1,6 @@
 import PointVertexShader from "./shaders/point.vert";
 import PointFragmentShader from "./shaders/point.frag";
-import { mat4, vec4 } from "gl-matrix";
+import { mat4 } from "gl-matrix";
 
 
 class Clock {
@@ -250,7 +250,7 @@ class Clock {
       const milliseconds = date.getMilliseconds()
       const secondsAngle = (( 360 / 60 ) * seconds) + (milliseconds  * 0.006)
       const minutesAngle = (360 / 60) * minutes + (seconds * 0.1)
-      const hoursArrowAngle = ( hours * ANGLE_STEP ) + (minutes * 2.5);
+      const hoursArrowAngle = ( hours * ANGLE_STEP ) + (minutes * (ANGLE_STEP / 60));
 
       drawSingleArrow('hour', hoursArrowAngle);
       drawSingleArrow('minute', minutesAngle);
